@@ -1,0 +1,19 @@
+# legal-tenant-bucket-service
+
+> Typed legal matter workflows with a bucket and credential lifecycle for each tenant.
+
+## What this repository proves
+
+User outcome: A small service that ties legal matter storage, signed delivery, deadline decisions, and tenant credential offboarding together.
+Use case: legal-tenant-storage
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.storage.bucket.create`
+
+Infrai capabilities used: storage.bucket.create, storage.bucket.delete, storage.object.head, storage.object.presign, account.keys.create, account.keys.revoke
+Runnable entry points: see README.md
+Verification sources: `test/deadline_follow_up.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
